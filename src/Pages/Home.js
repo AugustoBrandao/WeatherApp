@@ -13,10 +13,21 @@ function Home(){
         }
     );
 
+    const weather =()=> {
+        let w = data.getCityByName.weather.temperature.actual - 273.15;
+        if(w < 20){
+            return "SIM";
+        }
+        else{
+            return "NÃO";
+        }
+    }
+
     if (error) return <h1>Erro!</h1>;
     if (data){
         console.log(data);
     }
+    
     return(
         <div className='home'>
             <h1>CIDADE</h1>
@@ -29,14 +40,10 @@ function Home(){
             <div className="weather">
                 {data && (
                     <>
-                        <h3>Cidade:</h3>
-                        <p>{data.getCityByName.name}</p>
-
-                        <h3>Temperatura (°C): </h3>
-                        <p>{data.getCityByName.weather.temperature.actual - 273.15}</p>
-
-                        <h3>Vento: </h3>
-                        <p>{data.getCityByName.weather.wind.speed}</p>
+                        <p>Cidade: {data.getCityByName.name}</p>
+                        <p>Temperatura: {(data.getCityByName.weather.temperature.actual - 273.15).toFixed()} °C</p>
+                        <p>Vento: {data.getCityByName.weather.wind.speed} Mph</p>
+                        <p role="textbox">Leva Casaco?  {weather()}</p>
                     </>
                 )}
             </div>
