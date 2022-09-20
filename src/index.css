@@ -1,13 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+  background-color: #038287a7;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-weight: bold;
+  background-color: #004578;
+  border: 0px;
+  height: 25px;
+  margin-left: 10px;
+  border-radius: 10px;
 }
+
+button:hover{
+  cursor: pointer;
+  background-color: #038387;
+}
+
+#home{
+  padding: 10px;
+  border: 0px;
+  border-radius: 25px;
+  background-color: white;
+  border-style: solid;
+  width: 350px;
+  height: 300px;
+  text-align: center;
+}
+
+
