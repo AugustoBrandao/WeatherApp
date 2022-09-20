@@ -30,7 +30,7 @@ function Home(){
     
     return(
         <div className='home'>
-            <h1>CIDADE</h1>
+            <h1>Weather App</h1>
             <input type="text" placeholder="Ex: São Paulo" 
                 onChange={(event) => {
                     setCitySearched(event.target.value);
